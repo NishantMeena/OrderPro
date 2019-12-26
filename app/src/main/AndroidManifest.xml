@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.customer.orderproupdated">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- CAMERA-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- PHONE-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- STORAGE-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.customer.orderproupdated.UI.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.customer.orderproupdated.UI.WelcomeActivity"
+            android:theme="@style/DarkTheme.NoTitle"></activity>
+        <activity
+            android:name="com.customer.orderproupdated.UI.SignInActivity"
+            android:theme="@style/DarkTheme.NoTitle" />
+        <activity
+            android:name="com.customer.orderproupdated.UI.SignUpActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.customer.orderproupdated.UI.ForgetPasswordActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UI.HomeActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity android:name=".UI.NotificationSetting_Activity"></activity>
+        <activity
+            android:name=".UI.ChangePasswordActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".UI.MyProfileActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".UI.ContactusActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".UI.TermsofuseActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".UI.QuickOrderActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".UI.Attribute_Activity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.OrderDetailsActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.MerchantDetailsActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.NotificationActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.ChatActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.CartActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.ProductDetailActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".UI.AllDetailsActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.AttributeSelectionActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.customer.orderproupdated.chat.activity.ChatWindow"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UI.ShareActivity"
+            android:theme="@style/DarkTheme.NoTitle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.AddMerchantActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".UI.FeedbackActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <receiver
+            android:name=".chat.Network.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".chat.rooster.RoosterConnectionService" />
+
+        <activity
+            android:name="chat.activity.PermissionFramework"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".chat.activity.PermissionFramework"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name="com.customer.orderproupdated.firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.customer.orderproupdated.firebase.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="302565e313bc5c0d8e93bc7f5f99a37308cad7fa" />
+    </application>
+
+</manifest>

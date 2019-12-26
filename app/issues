@@ -1,0 +1,30 @@
+
+1. I tried to share product on facebook, but blank post is created without image and price.
+   Developer comment:-Done.
+
+2. Still Image of product isn't dynamically it's showing static, I created a test product from merchant panel with different image but it's showing the same image of all.
+   Developer comment:-Done.
+
+3.I added a product from the merchant but it's not visible until I reopen the app, it should be show without reopening the app.
+  Developer comment:-need to discuss with sir.
+
+4.I disabled a product from the merchant panel, but still customer able to see and able to add this product to the cart.
+  Developer comment:-Done.
+
+
+
+
+5.On customer app their should be loader to show product on dashboard, currently it's showing blank until data isn't available from the backend.
+  Developer comment:-Done.
+
+6.If I select a product category then list of product of those category is showing but their is now option to go back to the category section. SS: https://www.screencast.com/t/BKiSoh3jF
+  Developer comment:-Done.(Here as per discussion with vinod sir if we will click on selected category then the page refresh.)
+
+7.After switch the merchant application should not navigates to the home screen should be remains on the same screen.
+  Developer comment:-Done.
+
+8.I clicked on switch merchant then getting a popup which showing wrong text correct it to "Are you sure you want to switch the merchant?"
+  Developer comment:-Done.
+
+9.Cart>UI issue when adding more then 999 units of item.
+  Developer comment:-here no  need to validate any value for cart.

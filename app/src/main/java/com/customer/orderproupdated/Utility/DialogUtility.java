@@ -1,0 +1,269 @@
+package com.customer.orderproupdated.Utility;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.util.Log;
+import android.widget.Toast;
+
+
+import com.customer.orderproupdated.R;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * Created by Sony on 12/21/2016.
+ */
+public class DialogUtility {
+        private static final String TAG_USER = "ORDERPRO";
+        public static final String TAG = "DialogUtility";
+        private static AlertDialog dialog;
+        private static ProgressDialog mProgressDialog;
+
+        /**
+         * Static method to show the dialog with custom message on it
+         *
+         * @param context      Context of the activity where to show the dialog
+         * @param title        Title to be shown either custom or application name
+         * @param msg          Custom message to be shown on dialog
+         * @param OK           Overridden click listener for OK button in dialog
+         * @param isCancelable : Sets whether this dialog is cancelable with the BACK key.
+         */
+        public static void showDialog(Context context, String title, String msg,
+                                      DialogInterface.OnClickListener OK, boolean isCancelable) {
+
+            if (title == null)
+                title = context.getResources().getString(R.string.app_name);
+
+            if (OK == null)
+                OK = new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                        hideDialog();
+                    }
+                };
+
+            if (dialog == null) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context,R.style.MyDialogTheme);
+                builder.setTitle(title);
+                builder.setMessage(msg);
+                builder.setPositiveButton("OK", OK);
+                dialog = builder.create();
+                dialog.setCancelable(isCancelable);
+            }
+
+            try {
+                dialog.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        /**
+         * Static method to show the dialog with custom message on it
+         *
+         * @param context      Context of the activity where to show the dialog
+         * @param title        Title to be shown either custom or application name
+         * @param msg          Custom message to be shown on dialog
+         * @param OK           Overridden click listener for OK button in dialog
+         * @param cancel       Overridden click listener for cancel button in dialog
+         * @param isCancelable : Sets whether this dialog is cancelable with the BACK key.
+         */
+        public static void showDialog(Context context, String title, String msg,
+                                      DialogInterface.OnClickListener OK,
+                                      DialogInterface.OnClickListener cancel, boolean isCancelable) {
+
+            if (title == null)
+                title = context.getResources().getString(R.string.app_name);
+
+            if (OK == null)
+                OK = new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface paramDialogInterface,
+                                        int paramInt) {
+                        hideDialog();
+                    }
+                };
+
+            if (cancel == null)
+                cancel = new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface paramDialogInterface,
+                                        int paramInt) {
+                        hideDialog();
+                    }
+                };
+
+            if (dialog == null) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context,R.style.MyDialogTheme);
+                builder.setTitle(title);
+                builder.setMessage(msg);
+                builder.setPositiveButton("OK", OK);
+                builder.setNegativeButton("Cancel", cancel);
+                dialog = builder.create();
+                dialog.setCancelable(isCancelable);
+            }
+
+            try {
+                dialog.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        /**
+         * Static method to show the progress dialog.
+         *
+         * @param context      : Context of the activity where to show the dialog
+         * @param isCancelable : Sets whether this dialog is cancelable with the BACK key.
+         * @param message      : Message to be shwon on the progress dialog.
+         * @return Object of progress dialog.
+         */
+        public static Dialog showProgressDialog(Context context, boolean isCancelable, String message) {
+            mProgressDialog = new ProgressDialog(context, R.style.MyDialogTheme);
+            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            mProgressDialog.setMessage(message);
+            mProgressDialog.show();
+            mProgressDialog.setCancelable(isCancelable);
+            return mProgressDialog;
+        }
+
+        /**
+         * Static method to pause the progress dialog.
+         */
+        public static void pauseProgressDialog() {
+            try {
+                if (mProgressDialog != null) {
+                    mProgressDialog.cancel();
+                    mProgressDialog.dismiss();
+                    mProgressDialog = null;
+                }
+            } catch (IllegalArgumentException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        /**
+         * Static method to cancel the Dialog.
+         */
+        public static void cancelDialog() {
+
+            try {
+                if (dialog != null) {
+                    dialog.cancel();
+                    dialog.dismiss();
+                    dialog = null;
+                }
+            } catch (IllegalArgumentException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        /**
+         * Static method to hide the dialog if visible
+         */
+        public static void hideDialog() {
+
+            if (dialog != null && dialog.isShowing()) {
+                dialog.dismiss();
+                dialog.cancel();
+                dialog = null;
+            }
+        }
+
+        /**
+         * This method will create alert dialog
+         *
+         * @param context  Context of calling class
+         * @param title    Title of the dialog to be shown
+         * @param msg      Msg of the dialog to be shown
+         * @param btnText  array of button texts
+         * @param listener
+         */
+        public static void showAlertDialog(Context context, String title,
+                                           String msg, String btnText,
+                                           DialogInterface.OnClickListener listener) {
+
+            if (listener == null)
+                listener = new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface paramDialogInterface,
+                                        int paramInt) {
+                        paramDialogInterface.dismiss();
+                        paramDialogInterface.dismiss();
+                    }
+                };
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(context,R.style.MyDialogTheme);
+            builder.setTitle(title);
+            builder.setMessage(msg);
+            builder.setPositiveButton(btnText, listener);
+            dialog = builder.create();
+            dialog.setCancelable(false);
+            dialog.show();
+        }
+
+
+
+        /**
+         * Checks the validation of email address.
+         * Takes pattern and checks the text entered is valid email address or not.
+         *
+         * @param email : email in string format
+         * @return True if email address is correct.
+         */
+        public static boolean isEmailValid(String email) {
+            String expression = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+            Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(email);
+            if (matcher.matches()) {
+                return true;
+            } else if (email.equals("")) {
+                return true;
+            }
+            return false;
+        }
+
+
+
+
+
+
+
+        public static void showToast(Context context, String msg) {
+            try {
+                Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        public static void showLOG(String msg) {
+            Log.d(TAG_USER, msg);
+        }
+
+        public static void showMaterialDialog(Context context, String title, String message) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.MyDialogTheme);
+            builder.setTitle(title);
+            builder.setMessage(message);
+
+            String positiveText = "ok";
+            builder.setPositiveButton(positiveText,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+
+            AlertDialog dialog = builder.create();
+            // display dialog
+            dialog.show();
+        }
+
+    }
+
+
+

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:orientation="vertical">
+
+   <!--3F6783-->
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/arrow_back_white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/cust_placeholder" />
+
+        <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Merchant Name"
+            android:textColor="@color/white"
+            android:cursorVisible="false"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="7dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/location_icon" />
+
+            <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Not Available"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/light_blue_text"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_below="@+id/layout1"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center"
+                android:background="@drawable/call"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/chat"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center"
+                android:background="@drawable/message_dot"
+                android:padding="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout2"
+        android:layout_centerHorizontal="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#ffffff">
+
+            <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                android:id="@+id/name_below"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bottom_border"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawingCacheQuality="auto"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left"
+                android:hint="User Name :"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="7dp"
+                android:text="Merchant Name"
+                android:textColor="#ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#ffffff">
+
+            <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bottom_border"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawingCacheQuality="auto"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left"
+                android:hint="Contact No :"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:padding="7dp"
+                android:text="9425091050"
+                android:textColor="#ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#ffffff">
+
+            <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                android:id="@+id/emailid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bottom_border"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawingCacheQuality="auto"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left"
+                android:hint="Email Id :"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="7dp"
+                android:text="ayush.bhatnagar@advantal.net"
+                android:textColor="#ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:textColorHint="#ffffff">
+
+            <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bottom_border"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawingCacheQuality="auto"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="left"
+                android:hint="Customer Adress :"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="7dp"
+                android:text="Indore"
+                android:textColor="#ffffff"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="0.5"
+                android:textColorHint="#ffffff">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:drawingCacheQuality="auto"
+                    android:gravity="left"
+                    android:hint="City:"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColorHint="#ffffff"
+                android:visibility="gone">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:drawingCacheQuality="auto"
+                    android:gravity="left"
+                    android:hint="Pin Code:"
+                    android:layout_marginLeft="5dp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

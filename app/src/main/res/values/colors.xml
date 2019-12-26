@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0174DF</color>
+    <color name="dark_blue">#1A2B49</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="light_blue_text">#0098DB</color>
+    <color name="text_gray">#6A6A6A</color>
+    <color name="cart_btn_background">#0057B3</color>
+    <color name="attribute_button_color">#0D65B9</color>
+    <color name="attribute_dialog_background">#E3E3E3</color>
+    <color name="dots_background">#E9EEF1</color>
+    <color name="black">#000000</color>
+    <color name="line_gray">#e8e8e8</color>
+    <!-- dots colors -->
+    <color name="dot_dark_screen1">#fff</color>
+    <color name="dot_dark_screen2">#fff</color>
+    <color name="dot_dark_screen3">#fff</color>
+    <color name="dot_dark_screen4">#fff</color>
+    <color name="dot_light_screen1">#e4b5fc</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#93c6fd</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+    <!-- welcome screen  colors -->
+    <color name="welcome">#bdc3c7</color>
+    <color name="welcome_1">#443276</color>
+    <color name="welcome_2">#2a91cd</color>
+    <color name="welcome_3">#2752a1</color>
+    <color name="welcome_4">#2e678e</color>
+    <!--horizontal scroll view color-->
+    <color name="horizontal_scroll_color">#19246d</color>
+    <color name="white">#fff</color>
+    <color name="attachment_effect">#B8BABC</color>
+    <string name="typesomething">Type Something</string>
+    <!--// Tab Background Color-->
+    <!--// Ticker-->
+    <!--// Incming Bubble Color-->
+    <color name="incoming_bubble_color_normal">#B6DEF7</color>
+    <color name="outgoing_bubble_color_normal">@color/white</color>
+    <color name="listselector">#BBE9EF</color>
+
+</resources>

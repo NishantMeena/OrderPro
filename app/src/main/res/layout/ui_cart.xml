@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/total_layout"
+        android:layout_below="@+id/main_toolbar"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_layout"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.customer.orderproupdated.custom_fonts.Custom_text
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grand Total" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp">
+
+            <com.customer.orderproupdated.custom_fonts.Custom_text
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs"
+                android:textSize="18sp" />
+
+            <com.customer.orderproupdated.custom_fonts.Custom_text
+                android:id="@+id/grand_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.customer.orderproupdated.custom_fonts.Custom_Btntxt
+            android:id="@+id/btn_place_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_layout_color"
+            android:text="PLACE ORDER"
+            android:textColor="@android:color/white">
+
+        </com.customer.orderproupdated.custom_fonts.Custom_Btntxt>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cart_empty"/>
+
+        <com.customer.orderproupdated.custom_fonts.Custom_text
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cart Empty"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp" />
+
+        <com.customer.orderproupdated.custom_fonts.Custom_Btntxt
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Shopping"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@color/light_blue_text"/>
+    </LinearLayout>
+</RelativeLayout>

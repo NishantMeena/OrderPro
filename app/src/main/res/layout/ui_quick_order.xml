@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="false"
+    >
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/main_toolbar"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/no_prod_layout" />
+    <RelativeLayout
+        android:id="@+id/no_prod_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewline"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.customer.orderproupdated.views.ResizableImageView
+            android:id="@+id/iv_no_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cart_empty"
+            android:layout_centerInParent="true"/>
+
+        <com.customer.orderproupdated.custom_fonts.Custom_text
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_products_found"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:layout_below="@+id/iv_no_products"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

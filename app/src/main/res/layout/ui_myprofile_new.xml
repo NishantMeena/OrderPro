@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/arrow_back_white" />
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/edit_white_icon" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/iv_back"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        tools:ignore="NotSibling">
+
+        <com.customer.orderproupdated.custom_fonts.Custom_text
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="textCapSentences"
+            android:text="My Profile"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/merchant_profileicon" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_submit"
+        android:layout_below="@+id/layout1"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="#ffffff">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:id="@+id/et_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawingCacheQuality="auto"
+                    android:focusable="false"
+                    android:gravity="left"
+                    android:hint="First name :"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="#ffffff">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:id="@+id/et_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawingCacheQuality="auto"
+                    android:focusable="false"
+                    android:gravity="left"
+                    android:hint="Last name :"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="#ffffff">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:id="@+id/et_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawingCacheQuality="auto"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left"
+                    android:hint="Contact No :"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColorHint="#ffffff">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawingCacheQuality="auto"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left"
+                    android:hint="Email Id :"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColorHint="#ffffff"
+                android:visibility="visible">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawingCacheQuality="auto"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <!-- Text Label -->
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="State:"
+                    android:textColor="@color/white" />
+
+                <!-- Spinner Element -->
+                <Spinner
+                    android:id="@+id/spinner_state"
+                    style="@android:style/Widget.Holo.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/spinner_school_type_text"
+                    android:popupBackground="@color/light_blue_text"
+
+                    ></Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_state_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="#ffffff"
+                    android:visibility="visible">
+
+                    <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                        android:id="@+id/et_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bottom_border"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:drawingCacheQuality="auto"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="left"
+                        android:hint="State:"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="7dp"
+                        android:textColor="#ffffff"
+                        android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="City:"
+                    android:textColor="@color/white" />
+
+                <Spinner
+                    android:id="@+id/spinner_city"
+                    style="@android:style/Widget.Holo.Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/spinner_school_type_text"
+                    android:popupBackground="@color/light_blue_text"
+
+                    ></Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_city_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="#ffffff"
+                    android:visibility="visible">
+
+                    <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                        android:id="@+id/et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bottom_border"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:drawingCacheQuality="auto"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="left"
+                        android:hint="City:"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="7dp"
+                        android:textColor="#ffffff"
+                        android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColorHint="#ffffff"
+                android:visibility="visible">
+
+                <com.customer.orderproupdated.custom_fonts.CustomEditTxt
+                    android:id="@+id/et_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_border"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawingCacheQuality="auto"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left"
+                    android:hint="Pincode:"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/btn_selector"
+        android:gravity="center"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

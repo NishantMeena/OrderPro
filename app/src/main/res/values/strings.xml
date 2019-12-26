@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">OrderPro</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="next">NEXT</string>
+
+    <string name="skip">SKIP</string>
+
+    <string name="start">GOT IT</string>
+
+    <string name="password">Password*</string>
+
+    <string name="email">Email Address*</string>
+
+    <string name="confirm_password">Confirm Password*</string>
+
+    <string name="signup">Don\'t have an account?</string>
+
+    <string name="signin">Already have an account?</string>
+
+    <string name="slide_1_title">Welcome to OrderPro ! </string>
+
+    <string name="slide_1_desc">The easiest way to order !</string>
+
+    <string name="slide_3_title">Reduce Query Calls</string>
+
+    <string name="slide_3_desc">Faster query resolution and support</string>
+
+    <string name="slide_4_title">Prevent Order Errors</string>
+
+    <string name="slide_4_desc">Enhance order experience for customers</string>
+
+    <string name="Your_wishlist_is_empty">No Favourites</string>
+
+    <string name="rs">\u20B9</string>
+
+    <string name="search_hint">Search</string>
+
+    <string name="please_wait">Please wait</string>
+
+    <string name="alert">Message</string>
+
+    <string name="checknet">The Internet connection appears to be offline. Please check your network settings.</string>
+    <string name="request_fail">Internal Error</string>
+    <string name="Description">Description</string>
+    <string name="Specification">Specifications</string>
+    <string name="email_id">Email ID*</string>
+    <string name="forget_password">Forgot Password</string>
+    <string name="forget_password_message">Please submit registered Email ID</string>
+    <string name="submit">Submit</string>
+    <string name="first_name">First Name*</string>
+    <string name="last_name">Last Name*</string>
+    <string name="contact_no">Mobile Number*</string>
+    <string name="address">Address</string>
+    <string name="no_merchant_added">No merchant added</string>
+    <string name="add_merchant">Add merchant</string>
+    <string name="add">Add</string>
+    <string name="no_order_history">No Order Placed</string>
+    <string name="no_notifications">No Notifications</string>
+    <string name="sign_in">Sign In</string>
+    <string name="pid">PID:</string>
+    <string name="skuid">SKU:</string>
+    <string name="details">Details</string>
+    <string name="specifications">Specifications</string>
+    <string name="no_details">No Details</string>
+    <string name="no_specifications">No Specifications</string>
+    <string name="no_products_found">No Products Found</string>
+    <string name="no_merchant_selected">No Merchnat Selected,Please Select atleast one Merchant</string>
+
+    <string name="date_yesterday">Yesterday</string>
+    <string name="date_today">Today</string>
+    <string name="alter_file_limit">File size exceeds limit and cannot transfer.</string>
+    <string name="alert_imageformat">Image format not support.</string>
+    <string name="alert_take_resourecs">Sorry! Failed to take resource</string>
+
+    <string name="clear_chat">Clear Chat</string>
+    <string name="clear_conversation">Are you really want to clear conversation of this chat?</string>
+
+    <string name="alter_capure_image">Sorry! Failed to capture image</string>
+    <string name="terms_conditions">Terms and conditions</string>
+    <string name="contact_us">Contact us</string>
+    <string name="faq">FAQs</string>
+    <string name="name">Name</string>
+    <string name="email_contact_us">Email</string>
+    <string name="subject">Subject</string>
+    <string name="contact_us_address" >510, 6th Floor, Shagun Complex , AB Road, Vijay Nagar, Indore - 452010, Above Apna Sweets (M.P.)\n Tool Free : 18001027799</string>
+    <string name="tc_text"> 1.\tThis template legal document was produced and published by SEQ Legal LLP. 2.\tWe control the copyright in this template, and you may only use this template in accordance with the licensing provisions in our terms and conditions. Those licensing provisions include an obligation to retain the SEQ Legal credit incorporated into the template. 3.\tThe current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions. 4.\tThe current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions. 5.\tThe current version of our terms and conditions is available at: http://www.seqlegal.com/our-terms-and-conditions. 9.\tIf you would like to use this template without the SEQ Legal credit, you can purchase a licence to do so at: http://www.website-contracts.co.uk/seqlegal-licences.html</string>
+    <string name="orderid">Order ID :</string>
+    <string name="feedback">Feedback</string>
+    <string name="more"><u>More</u> ></string>
+
+    <string name="welcome_text_one">Eliminate Manual Order Entry</string>
+    <string name="welcome_text_one_low">Manage all orders with us</string>
+    <string name="feedback_title">We want your feedback</string>
+    <string name="rating_header">Like the app? Rate Us</string>
+    <string name="rate_now">RATE NOW</string>
+    <string name="how_can_we_improve">How can we improve?</string>
+    <string name="give_suggestion">GIVE SUGGESTIONS</string>
+
+
+</resources>

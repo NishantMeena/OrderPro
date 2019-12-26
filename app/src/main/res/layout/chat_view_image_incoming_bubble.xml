@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="4dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="4dp">
+
+        <RelativeLayout
+            android:id="@+id/chatBubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bubble_normal_incoming">
+
+            <TextView
+                android:id="@+id/senderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Group User"
+                android:textColor="#F0F3F4"
+                android:textSize="15dp"
+                android:visibility="gone"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:layout_below="@+id/senderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="150dp"
+                android:minHeight="145dp"
+                android:id="@+id/imageBubble"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_alignLeft="@+id/imageBubble"
+                android:layout_alignRight="@+id/imageBubble"
+                android:layout_alignBottom="@+id/imageBubble"
+                android:layout_alignTop="@+id/imageBubble"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="150dp"
+                android:minHeight="150dp">
+
+                <ImageView
+                    android:id="@+id/play_video"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_audio_play"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/downloadMedia"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_download_file" />
+
+
+                <ProgressBar
+                    android:id="@+id/downloadProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="50dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageBubble"
+                android:layout_alignRight="@+id/imageBubble"
+                android:layout_below="@+id/imageBubble">
+
+                <ImageView
+                    android:id="@+id/iv_evap"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/time"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="2dp"
+                    android:src="@drawable/evap_clock_white" />
+
+                <ImageView
+                    android:id="@+id/iv_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/read_tick"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="2:44 P.M."
+                    android:textColor="#F0F3F4"
+                    android:textSize="12dp"
+                  />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye_confied" />
+    </RelativeLayout>
+
+</LinearLayout>
